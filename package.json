@@ -1,6 +1,6 @@
 {
-  "name": "@osmosframe/test-utils",
-  "version": "1.0.0",
+  "name": "@osmoscraft/typescript-testing-library",
+  "version": "0.0.1",
   "description": "",
   "main": "index.ts",
   "types": "index.ts",
@@ -9,10 +9,10 @@
     "test:watch": "ts-node-dev --project tsconfig.test.json --respawn --watch --transpile-only run-test.ts"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "osmoscraft",
+  "license": "MIT",
   "devDependencies": {
-    "@types/node": "^16.7.1",
+    "@types/node": "^16.10.1",
     "ts-node-dev": "^1.1.8"
   }
 }
