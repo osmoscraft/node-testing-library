@@ -3,7 +3,7 @@
 ## Get started
 
 ```
-npm i -D @osmoscraft/typescript-testing-library ts-node-dev
+npm i -D @osmoscraft/typescript-testing-library
 ```
 
 Create `run-test.ts` in your project root with the following content:
