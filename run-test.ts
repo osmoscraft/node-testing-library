@@ -1,6 +1,6 @@
 import assert from "assert/strict";
-import { getTests, runTests } from "./";
-import { scheduledSuites, _clearScheduledTests } from "./scheduler";
+import { getTests, runTests } from "./src";
+import { scheduledSuites, _clearScheduledTests } from "./src/scheduler";
 
 async function runAssertionPassingTests() {
   const tests = await getTests("./", /assertion-should-pass\.test\.ts$/);
@@ -78,12 +78,21 @@ async function run() {
 
   console.log(
     `${
-      assertionShouldPassResults.stats.failCount + assertionShouldPassResults.stats.warningCount
+      assertionShouldPassResults.stats.failCount +
+      assertionShouldPassResults.stats.warningCount
     } assertion should-pass tests failed`
   );
-  console.log(`${assertionsShouldFailResults.stats.passCount} assertion should-fail tests passed`);
-  console.log(`${lifecycleResults.stats.warningCount} lifecycle issues successfully reported`);
-  console.log(`${schedulerResults.stats.failCount + schedulerResults.stats.warningCount} scheduler tests failed`);
+  console.log(
+    `${assertionsShouldFailResults.stats.passCount} assertion should-fail tests passed`
+  );
+  console.log(
+    `${lifecycleResults.stats.warningCount} lifecycle issues successfully reported`
+  );
+  console.log(
+    `${
+      schedulerResults.stats.failCount + schedulerResults.stats.warningCount
+    } scheduler tests failed`
+  );
 }
 
 run();

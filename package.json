@@ -2,17 +2,19 @@
   "name": "@osmoscraft/typescript-testing-library",
   "version": "0.0.2",
   "description": "",
-  "main": "index.ts",
-  "types": "index.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "ts-node-dev --quiet --project tsconfig.test.json --transpile-only run-test.ts",
-    "test:watch": "ts-node-dev --project tsconfig.test.json --respawn --watch --transpile-only run-test.ts"
+    "build": "tsc",
+    "test": "ts-node-dev --quiet --transpile-only run-test.ts",
+    "test:watch": "ts-node-dev --respawn --watch --transpile-only run-test.ts"
   },
   "keywords": [],
   "author": "osmoscraft",
   "license": "MIT",
   "devDependencies": {
-    "@types/node": "^16.10.1"
+    "@types/node": "^16.10.1",
+    "typescript": "^4.4.3"
   },
   "dependencies": {
     "ts-node-dev": "^1.1.8"
