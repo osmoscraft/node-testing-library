@@ -61,3 +61,10 @@ This library relies on `ts-node-dev` to compile TypeScript to JavavScript only t
 }
 
 ```
+and consume it in your `package.json` test script:
+```json
+  "scripts": {
+    "test": "ts-node-dev --project tsconfig.test.json --quiet --transpile-only run-test.ts",
+    "test:watch": "ts-node-dev --project tsconfig.test.json --respawn --watch --transpile-only run-test.ts",
+  },
+```
