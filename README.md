@@ -43,6 +43,37 @@ describe("hello world", () => {
 
 Please make sure to use `await` in frontend of each `expect` or the error reporting may not be able to surface all failed tests
 
+## API
+```TypeScript
+import { describe, expect, it, beforeEach, afterEach, beforeAll, afterAll } from "@osmoscraft/node-testing-library";
+
+describe("hello world", () => {
+  beforeAll(async () => {
+    // do something before all specs
+  });
+  beforeEach(async () => {
+    // do something before each spec
+  });
+  it("spec name", async () => {
+    // simple assertion
+    await expect("hello").toEqual("hello");
+    
+    // simple call
+    await expect(() => throw new Error()).toThrow();
+    
+    // negation
+    await expect(true).not.toEqual(false);
+    await expect(() => {}).not.toThrow();
+  });
+  afterEach(async () => {
+    // do something after each specs
+  });
+  afterAll(async () => {
+    // do something after all specs
+  });
+});
+```
+
 ## TypeScript configuration
 
 This library relies on `ts-node-dev` to compile TypeScript to JavavScript only the fly. Since the JavaScript output will be executed in a Node.js environment, your `tsconfig.json` should produce code that is compatible with Node.js. If your existing `tsconfig.json` produces code using `ESNext` module, you will need to specific a separate `tsconfig.test.json` like this:
