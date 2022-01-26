@@ -58,7 +58,7 @@ describe("hello world", () => {
     // simple assertion
     await expect("hello").toEqual("hello");
     
-    // simple call
+    // simple error
     await expect(() => throw new Error()).toThrow();
     
     // negation
