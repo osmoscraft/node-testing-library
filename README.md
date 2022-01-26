@@ -1,4 +1,4 @@
-# TypeScript Testing Library
+# Node Testing Library
 
 ## Get started
 
