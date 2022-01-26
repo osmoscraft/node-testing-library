@@ -1,5 +1,5 @@
 {
-  "name": "@osmoscraft/typescript-testing-library",
+  "name": "@osmoscraft/node-testing-library",
   "version": "0.0.5",
   "description": "",
   "main": "dist/index.js",

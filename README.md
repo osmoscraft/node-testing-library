@@ -3,13 +3,13 @@
 ## Get started
 
 ```
-npm i -D @osmoscraft/typescript-testing-library
+npm i -D @osmoscraft/node-testing-library
 ```
 
 Create `run-test.ts` in your project root with the following content:
 
 ```typescript
-import { getTests, runTests } from "@osmoscraft/typescript-testing-library";
+import { getTests, runTests } from "@osmoscraft/node-testing-library";
 
 async function run() {
   const tests = await getTests("src", /\.test\.ts$/);
@@ -32,7 +32,7 @@ Update `package.json` with the following scripts to run tests
 Write your first test in `src/hello-world.test.ts`
 
 ```typescript
-import { describe, expect, it } from "@osmoscraft/typescript-testing-library";
+import { describe, expect, it } from "@osmoscraft/node-testing-library";
 
 describe("hello world", () => {
   it("should pass", async () => {
